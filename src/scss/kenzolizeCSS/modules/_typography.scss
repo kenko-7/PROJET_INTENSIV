@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+// ----------------------------------------------------------------
+// TYPOGRAPHY VARIABLES
+// ----------------------------------------------------------------
+
+// PARAGRAPHES
+
+$font-1: 'Merriweather', georgia, serif;
+$font-color-default: $color-1;
+$font-size-default: 1em;
+$font-weight-default: 300;
+$line-height-default: 2;
+$text-align-default: justify;
+
+// TITLES
+
+$font-2: 'Source Sans Pro', helvetica, sans-serif;
+$font-color-h1: $color-1;
+$font-size-h1: 4rem;
+$font-weight-h1: 900;
+$line-height-h1: 1.2;
+$margin-h1: 0 0 0.7rem 0;
+$letter-spacing-h1: -0.025rem;
+$text-transform-h1: uppercase;
+
+$font-color-h2: $color-1;
+$font-size-h2: 1.75rem;
+$font-weight-h2: 900;
+$line-height-h2: 1.2;
+$margin-h2: 0 0 0.7rem 0;
+$letter-spacing-h2: -0.025rem;
+$text-transform-h2: uppercase;
+
+$font-color-h3: $color-1;
+$font-size-h3: 1.25rem;
+$font-weight-h3: 900;
+$line-height-h3: 1.5;
+$margin-h3: 0 0 0.7rem 0;
+$letter-spacing-h3: -0.025rem;
+$text-transform-h3: uppercase;
+
+$font-color-h4: $color-1;
+$font-size-h4: 1rem;
+$font-weight-h4: 900;
+$line-height-h4: 1.2;
+$margin-h4: 0 0 0.7rem 0;
+$letter-spacing-h4: -0.025rem;
+$text-transform-h4: uppercase;
+
+$font-color-h5: $color-1;
+$font-size-h5: 0.9rem;
+$font-weight-h5: 900;
+$line-height-h5: 1.2;
+$margin-h5: 0 0 0.7rem 0;
+$letter-spacing-h5: -0.025rem;
+$text-transform-h5: uppercase;
+
+$font-color-h6: $color-1;
+$font-size-h6: 0.8rem;
+$font-weight-h6: 900;
+$line-height-h6: 1.65;
+$margin-h6: 0 0 0.7rem 0;
+$letter-spacing-h6: -0.025rem;
+$text-transform-h6: uppercase;
+
+// LINKS
+
+$link-color: $color-1;
+$link-decoration: underline dotted;
+
+$link-hover-color: $color-1;
+$link-hover-decoration: none;
+
+// CODE
+
+$code-color: $color-1;
+$code-background: rgba(242, 243, 244);
+$code-padding: 0.1em;
+$code-border: 1px solid $color-4-darken;
+
+// HR
+
+$hr-height: 1px;
+$hr-margin: 2rem 0;
+$hr-border: 1px solid $color-4-darken;
+
+// BOX
+
+$box-font-weight: 200;
+$box-border: 2px solid $color-4-darken;
+$box-text-align: justify;
+$box-padding: 1rem;
+$box-line-height: 2rem;
+
+// PREFORMATTED
+
+$pre-padding: 1rem;
+$pre-font-size: $font-size-default;
+$pre-font-weight: $font-weight-default;
+$pre-border: 1px solid $color-4-darken;
+$pre-color: $color-1;
+$pre-background: rgba(242, 243, 244);
+
+// ----------------------------------------------------------------
+// DEFAULT SPECIFICATIONS
+// ----------------------------------------------------------------
+
+// BODY
+body {
+	font-family: $font-1;
+	color: $color-1;
+	font-size: $font-size-default;
+	font-weight: $font-weight-default;
+	line-height: $line-height-default;
+	@media screen and (min-width: map-get($screen-sizes, 'm', 'breakpoint')) {
+		font-size: 0.9rem;
+	}
+	@media screen and (min-width: map-get($screen-sizes, 'l', 'breakpoint')) {
+		font-size: 1rem;
+	}
+	p {
+		text-align: $text-align-default;
+	}
+}
+
+// LINKS
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+// CODE
+code {
+	color: $code-color;
+	background: $code-background;
+	padding: $code-padding;
+	border: $code-border;
+}
+
+// HR
+hr {
+	height: $hr-height;
+	border: $hr-border;
+	margin: $hr-margin;
+}
+
+.box {
+	font-weight: $box-font-weight;
+	text-align: $box-text-align;
+	border: $box-border;
+	padding: $box-padding;
+	line-height: $box-line-height;
+}
+
+// PREFORMATTED
+
+pre {
+	padding: $pre-padding;
+	font-size: $pre-font-size;
+	font-weight: $pre-font-weight;
+	border: $pre-border;
+	color: $pre-color;
+	background: $pre-background;
+	overflow: hidden;
+}
+
+// HEADERS
+h1,
+.h1 {
+	font-family: $font-2;
+	color: $font-color-h1;
+	font-size: $font-size-h1;
+	font-weight: $font-weight-h1;
+	line-height: $line-height-h1;
+	margin: $margin-h1;
+	letter-spacing: $letter-spacing-h1;
+	text-transform: $text-transform-h1;
+}
+
+h2,
+.h2 {
+	font-family: $font-2;
+	color: $font-color-h2;
+	font-size: $font-size-h2;
+	font-weight: $font-weight-h2;
+	line-height: $line-height-h2;
+	margin: $margin-h2;
+	letter-spacing: $letter-spacing-h2;
+	text-transform: $text-transform-h2;
+}
+
+h3,
+.h3 {
+	font-family: $font-2;
+	color: $font-color-h3;
+	font-size: $font-size-h3;
+	font-weight: $font-weight-h3;
+	line-height: $line-height-h3;
+	margin: $margin-h3;
+	letter-spacing: $letter-spacing-h3;
+	text-transform: $text-transform-h3;
+}
+
+h4,
+.h4 {
+	font-family: $font-2;
+	color: $font-color-h4;
+	font-size: $font-size-h4;
+	font-weight: $font-weight-h4;
+	line-height: $line-height-h4;
+	margin: $margin-h4;
+	letter-spacing: $letter-spacing-h4;
+	text-transform: $text-transform-h4;
+}
+
+h5,
+.h5 {
+	font-family: $font-2;
+	color: $font-color-h5;
+	font-size: $font-size-h5;
+	font-weight: $font-weight-h5;
+	line-height: $line-height-h5;
+	margin: $margin-h5;
+	letter-spacing: $letter-spacing-h5;
+	text-transform: $text-transform-h5;
+}
+
+h6,
+.h6 {
+	font-family: $font-2;
+	color: $font-color-h6;
+	font-size: $font-size-h6;
+	font-weight: $font-weight-h6;
+	line-height: $line-height-h6;
+	margin: $margin-h6;
+	letter-spacing: $letter-spacing-h6;
+	text-transform: $text-transform-h6;
+}

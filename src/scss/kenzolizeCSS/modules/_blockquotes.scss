@@ -1,0 +1,16 @@
+// BLOCKQUOTES VARIABLES
+
+$quotes-border-left: 2px solid $color-4-darken;
+$quotes-font-style: italic;
+$quotes-margin: 2rem 0;
+$quotes-padding: 0 1.5rem;
+
+// DEFAULT SPECIFICATIONS
+
+blockquote,
+.blockquote {
+	border-left: $quotes-border-left;
+	font-style: $quotes-font-style;
+	margin: $quotes-margin;
+	padding: $quotes-padding;
+}

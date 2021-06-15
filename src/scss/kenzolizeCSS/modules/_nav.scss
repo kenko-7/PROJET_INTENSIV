@@ -1,0 +1,163 @@
+// ----------------------------------------------------------------
+// NAVBAR VARIABLES
+// ----------------------------------------------------------------
+
+// NAV CONTENT
+
+$nav-justify-content: space-between;
+$nav-background: rgba(
+	$color: $color-3,
+	$alpha: 0.175,
+);
+$nav-display: flex;
+$nav-height: 4rem;
+$nav-line-height: 4rem;
+$nav-margin: -4rem auto 0 auto;
+$nav-padding: 0 2rem 0 0;
+$nav-align-items: center;
+
+// LIST-LINKS
+
+$list-links-list-style: none;
+$list-links-display: flex;
+$list-links-text-transform: uppercase;
+$list-links-font-family: $font-2;
+$list-links-font-weight: 900;
+$list-links-font-size: 0.8rem;
+$list-links-letter-spacing: 0.1rem;
+$list-links-margin-top: 0;
+$list-links-margin-bottom: 0;
+$list-links-padding-left: 0;
+
+// LINKS
+
+$links-color: $color-4;
+$links-display: block;
+$links-text-decoration: none;
+$links-padding: 0 16px 0 16px;
+
+// LINKS-HOVER
+
+$links-hover-background: $color-4;
+$links-hover-color: $color-1;
+
+// LINKS-ACTIVE
+
+$links-active-background: $color-4;
+$links-active-color: $color-1;
+
+// LIST-ICONS
+
+$list-icons-list-style: none;
+$list-icons-display: flex;
+$list-icons-margin-top: 0;
+$list-icons-margin-bottom: 0;
+$list-icons-padding-left: 0;
+
+// LIST
+
+$list-padding-right: 1.5rem;
+
+// ICONS
+
+$icons-color: $color-4;
+$icons-display: flex;
+
+// ICONS-HOVER
+
+$icons-hover-color: $color-5;
+
+// MENU
+
+.menu {
+	display: flex;
+	position: fixed;
+	top: 1rem;
+	right: 5rem;
+	letter-spacing: 0.1rem;
+	color: azure;
+	h5 {
+		display: flex;
+		position: fixed;
+		top: 1rem;
+		right: 2rem;
+		letter-spacing: 0.1rem;
+		color: azure;
+	}
+}
+
+// NAV HIDEN
+
+@each $size, $values in $screen-sizes {
+	@media screen and (min-width: map-get($values, 'breakpoint')) {
+		.hide-from-#{$size} {
+			display: none;
+		}
+	}
+}
+// NAV VISIBLE
+@each $size, $values in $screen-sizes {
+	@media screen and (max-width: map-get($values, 'breakpoint')) {
+		.hide-until-#{$size} {
+			display: none;
+		}
+	}
+}
+
+// ----------------------------------------------------------------
+// DEFAULT SPECIFICATIONS
+// ----------------------------------------------------------------
+.nav-content {
+	justify-content: $nav-justify-content;
+	background: $nav-background;
+	display: $nav-display;
+	height: $nav-height;
+	line-height: $nav-line-height;
+	margin: $nav-margin;
+	padding: $nav-padding;
+	align-items: $nav-align-items;
+}
+
+.list-links {
+	list-style: $list-links-list-style;
+	display: $list-links-display;
+	text-transform: $list-links-text-transform;
+	font-family: $list-links-font-family;
+	font-weight: $list-links-font-weight;
+	font-size: $list-links-font-size;
+	letter-spacing: $list-links-letter-spacing;
+	margin-top: $list-links-margin-top;
+	margin-bottom: $list-links-margin-bottom;
+	padding-left: $list-links-padding-left;
+	a {
+		color: $links-color;
+		display: $links-display;
+		text-decoration: $links-text-decoration;
+		padding: $links-padding;
+	}
+	a:hover {
+		background: $links-hover-background;
+		color: $links-hover-color;
+	}
+	.active {
+		background: $links-active-background;
+		color: $links-active-color;
+	}
+}
+.list-icons {
+	list-style: $list-icons-list-style;
+	display: $list-icons-display;
+	margin-top: $list-icons-margin-top;
+	margin-bottom: $list-icons-margin-bottom;
+	padding-left: $list-icons-padding-left;
+	li {
+		padding-right: $list-padding-right;
+	}
+	i {
+		color: $icons-color;
+		display: $icons-display;
+	}
+	& i:hover {
+		color: $icons-hover-color;
+	}
+}

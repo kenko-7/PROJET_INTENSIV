@@ -1,0 +1,53 @@
+//----------------------------
+//FORM VARIABLES
+//----------------------------
+//FORM
+$width-form: 100%;
+$padding-form: 0.7rem;
+$color-form: $color-1;
+$border-form: 2px solid $color-4-darken;
+//TYPE RADIO
+$margin-top-radio: 2rem;
+$margin-right-radio: 1rem;
+//TYPE CHECKBOX
+$margin-top-checkbox: 2rem;
+$margin-right-checkbox: 1rem;
+$width-checkbox: 25px;
+$heigth-checkbox: 25px;
+$align-check: flex-end;
+//----------------------------
+//DEFAULT SPECIFICATIONS
+//----------------------------
+.form {
+	gap: 1rem;
+}
+.form-check {
+	align-items: flex-end;
+}
+.box {
+	width: $width-form;
+	padding: $padding-form;
+	color: $color-form;
+	border: $border-form;
+}
+.radio {
+	margin-top: $margin-top-radio;
+	margin-right: $margin-right-radio;
+	width: 25px;
+	height: 25px;
+}
+.checkbox {
+	margin-top: $margin-top-checkbox;
+	margin-right: $margin-right-checkbox;
+	width: $width-checkbox;
+	height: $heigth-checkbox;
+}
+.selected {
+	width: 100%;
+	padding: 0.7rem;
+	color: $color-1;
+	border: 2px solid $color-4-darken;
+}
+.champ-select {
+	display: flex;
+}
